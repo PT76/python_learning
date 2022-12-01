@@ -1,0 +1,58 @@
+
+# import random
+from random import randint
+# use a dictionary to contain design
+# key:value
+design =  {
+    1: (
+        "┌─────────┐",
+        "│         │",
+        "│    ●    │",
+        "│         │",
+        "└─────────┘",
+    ),
+    2: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│         │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    3: (
+        "┌─────────┐",
+        "│  ●      │",
+        "│    ●    │",
+        "│      ●  │",
+        "└─────────┘",
+    ),
+    4: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│         │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    5: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│    ●    │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+    6: (
+        "┌─────────┐",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "│  ●   ●  │",
+        "└─────────┘",
+    ),
+}
+
+# Create a random number from 1 to 6
+roll = [randint(1,6)]
+
+# itarate the design
+for row in range(5): # all dice design has 5 rows
+    for dice in roll:
+        print(design.get(dice)[row], end="")
+    print()
