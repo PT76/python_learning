@@ -1,0 +1,22 @@
+# import packages
+from tkinter import *
+from random import randint
+
+# create a number from 1 to 6
+def rolling():
+    roll.config(text=randint(1,6))
+    roll.pack()
+
+# main window
+app = Tk()
+app.title("Dice Roller")
+app.geometry("200x150")
+
+# print the number
+roll = Label(app)
+
+# use a button to call the function
+btn = Button(app, text='Roll a dice', command=rolling)
+btn.pack()
+
+app.mainloop()
